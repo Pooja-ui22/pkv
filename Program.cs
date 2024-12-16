@@ -11,7 +11,7 @@ namespace rock_paper_scissors
         public static void Main(string[] args)
         {
             string Replay = "yes";
-                     
+
             Player player = new Player("PlayerName");
             Player computer = new Player("ComputerName");
 
@@ -23,14 +23,14 @@ namespace rock_paper_scissors
 
                 while (MyChoice != "Rock" && MyChoice != "Paper" && MyChoice != "Scissors")
                 {
-                   Console.WriteLine("Invalid choice. Please enter Rock, Paper, or Scissors.");
-                   MyChoice = Console.ReadLine();
+                    Console.WriteLine("Invalid choice. Please enter Rock, Paper, or Scissors.");
+                    MyChoice = Console.ReadLine();
                 }
 
                 //string result = game.RPS(MyChoice);
                 player.SetChoice(MyChoice);
 
- 
+
                 computer.SetChoice(game.GetComputerChoice());
 
 
@@ -51,3 +51,4 @@ namespace rock_paper_scissors
         }
     }
 }
+

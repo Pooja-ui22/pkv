@@ -11,11 +11,11 @@ namespace rock_paper_scissors
     {
         private string[] Moves = { "Rock", "Paper", "Scissors" };
 
-        public string RPS(Player player, Player computer) 
+        public string RPS(Player player, Player computer)
         {
-           // Random random = new Random();
+            // Random random = new Random();
 
-           // int computerChoiceIndex = random.Next(Moves.Length);
+            // int computerChoiceIndex = random.Next(Moves.Length);
             //string ComputerChoice = Moves[computerChoiceIndex];
 
             Console.WriteLine("Pooja chose: " + player.Choice);
@@ -28,17 +28,17 @@ namespace rock_paper_scissors
                 Console.WriteLine("It's a tie!");
                 return "tie";
             }
-           /* else if (
-                (MyChoice == "Rock" && ComputerChoice == "Scissors") ||
-                (MyChoice == "Paper" && ComputerChoice == "Rock") ||
-                (MyChoice == "Scissors" && ComputerChoice == "Paper")
-            )*/
-             else if (
-                (player.Choice == "Rock" && computer.Choice == "Scissors") ||
-                (player.Choice == "Paper" && computer.Choice == "Rock") ||
-                (player.Choice == "Scissors" && computer.Choice == "Paper")
-            )
-                    {
+            /* else if (
+                 (MyChoice == "Rock" && ComputerChoice == "Scissors") ||
+                 (MyChoice == "Paper" && ComputerChoice == "Rock") ||
+                 (MyChoice == "Scissors" && ComputerChoice == "Paper")
+             )*/
+            else if (
+               (player.Choice == "Rock" && computer.Choice == "Scissors") ||
+               (player.Choice == "Paper" && computer.Choice == "Rock") ||
+               (player.Choice == "Scissors" && computer.Choice == "Paper")
+           )
+            {
                 Console.WriteLine("Pooja wins!");
                 return "win";
             }
@@ -52,8 +52,9 @@ namespace rock_paper_scissors
         public string GetComputerChoice()
         {
             Random random = new Random();
-            int computerChoiceIndex = random.Next(Moves.Length);
-            return Moves[computerChoiceIndex];
+            int Index = random.Next(Moves.Length);
+            return Moves[Index];
         }
     }
 }
+
